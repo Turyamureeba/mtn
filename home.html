@@ -3,94 +3,53 @@
 <head>
 <style>
   body {
+    font-family: Arial, sans-serif;
+    text-align: center;
     margin: 0;
     padding: 0;
     background-color: yellow;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
   }
-  .form-container {
-    text-align: center;
-    background-color: white;
+  .dashboard {
     padding: 20px;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
   }
-  .logo {
-    margin-bottom: 20px;
+  .nav {
+    margin-top: 20px;
   }
-  .logo img {
-    width: 100px;
-    height: auto;
-  }
-  .input-field {
-    margin: 10px 0;
-    padding: 5px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-  }
-  .action-button {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  .login-link {
-    display: block;
-    margin-top: 10px;
-    color: black;
+  .nav a {
     text-decoration: none;
+    margin: 0 15px;
+    color: #007bff;
   }
 </style>
 </head>
 <body>
 
-<!-- Login Form -->
-<div class="form-container" id="login-form">
-  <div class="logo">
-    <img src="your-logo.png" alt="Logo">
+<div class="dashboard">
+  <div class="container">
+    <h2>Welcome to Your Dashboard</h2>
+    <p>Here you can manage your account, access features, and more.</p>
+    
+    <!-- Common Scenarios -->
+    <div class="nav">
+      <a href="dashboard.php">User Dashboard</a>
+      <a href="home.php">Home Page</a>
+      <a href="tasks.php">Task List</a>
+      <a href="profile.php">Profile</a>
+      <a href="activity.php">Recent Activity</a>
+      <a href="onboarding.php">Onboarding</a>
+      <a href="customization.php">Customization</a>
+      <a href="notifications.php">Notifications</a>
+    </div>
   </div>
-  <h2>Login</h2>
-  <input type="text" class="input-field" placeholder="Username/Email">
-  <input type="password" class="input-field" placeholder="Password">
-  <button class="action-button">Login</button>
-  <a href="#" class="login-link" onclick="showRegistrationForm()">Sign Up</a>
-  <a href="#" class="login-link">Forgot Password?</a>
 </div>
-
-<!-- Registration Form -->
-<div class="form-container" id="registration-form" style="display: none;">
-  <div class="logo">
-    <img src="your-logo.png" alt="Logo">
-  </div>
-  <h2>Registration</h2>
-  <input type="text" class="input-field" placeholder="Full Name">
-  <input type="email" class="input-field" placeholder="Email">
-  <input type="password" class="input-field" placeholder="Password">
-  <input type="password" class="input-field" placeholder="Confirm Password">
-  <button class="action-button">Sign Up</button>
-  <a href="#" class="login-link" onclick="showLoginForm()">Login</a>
-</div>
-
-<script>
-  function showRegistrationForm() {
-    document.getElementById('login-form').style.display = 'none';
-    document.getElementById('registration-form').style.display = 'block';
-  }
-  
-  function showLoginForm() {
-    document.getElementById('login-form').style.display = 'block';
-    document.getElementById('registration-form').style.display = 'none';
-  }
-</script>
 
 </body>
 </html>
